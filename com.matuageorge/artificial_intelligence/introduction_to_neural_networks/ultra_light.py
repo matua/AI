@@ -1,10 +1,10 @@
+# https://colab.research.google.com/drive/1otYe5RPzGc_3ZdMIw94vbC66ODi1yfSQ?usp=sharing
+
 # Libraries loading
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras import utils
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from tensorflow.keras.optimizers import Adam
-import numpy as np
 
 (x_train_org, y_train_org), (x_test_org, y_test_org) = mnist.load_data()
 
