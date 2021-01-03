@@ -9,8 +9,8 @@ import numpy as np
 (x_train_org, y_train_org), (x_test_org, y_test_org) = mnist.load_data()
 
 # Normalization and transformation of x_train and y_train
-x_train = x_train_org.reshape(60000, 784)
-x_test = x_test_org.reshape(10000, 784)
+x_train_org = x_train_org.reshape(60000, 784)
+x_test_org = x_test_org.reshape(10000, 784)
 x_train = x_train_org.astype('float32') / 255
 x_test = x_test_org.astype('float32') / 255
 y_train = utils.to_categorical(y_train_org, 10)
@@ -24,4 +24,4 @@ model.add(Dense(10, activation="softmax"))
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # Neural network training
-
+model.fit(x_train, y_train, batch_size=128, epochs=15, verbose=1)
