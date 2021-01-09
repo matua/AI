@@ -25,7 +25,7 @@ result = np.append(result, rand_arr[-1] - rand_arr[-2])
 print("This is a gradient array of the above random array:")
 print(result, end="\n\n")
 
-print("This is a gradient array of the above random array generated via numpy function:")
+print("This is a gradient array of the above random array generated via python_numpy function:")
 result_via_gradient_fun = np.gradient(rand_arr)
 print(result_via_gradient_fun, end="\n\n")
 
